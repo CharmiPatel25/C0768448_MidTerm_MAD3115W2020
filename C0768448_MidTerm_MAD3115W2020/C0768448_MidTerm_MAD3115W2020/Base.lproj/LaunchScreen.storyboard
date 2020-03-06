@@ -23,7 +23,7 @@
                                     <fragment content="Charmi Patel">
                                         <attributes>
                                             <color key="NSColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="22" name=".SFNS-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="22"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -36,7 +36,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bill_pic.png" translatesAutoresizingMaskIntoConstraints="NO" id="qhU-dk-4kh">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bill_pic" translatesAutoresizingMaskIntoConstraints="NO" id="qhU-dk-4kh">
                                 <rect key="frame" x="81" y="181" width="239" height="147"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -51,6 +51,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bill_pic.png" width="238" height="212"/>
+        <image name="bill_pic" width="238" height="212"/>
     </resources>
 </document>
