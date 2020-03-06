@@ -18,10 +18,14 @@ class LoginViewController: UIViewController {
     @IBAction func btnLogin(_ sender: UIButton) {
         if (txtEmailId.text == "" || txtPassword.text == "")
         {
-            let alert = UIAlertController(title: "Alert", message: "EmailId or password is empty", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Alert", message: "EmailID or password is empty", preferredStyle: .alert)
             let action = UIAlertAction(title: "Continue", style: .default, handler: nil)
             alert.addAction(action)
             self.present(alert,animated: true)
+        }
+        else if(txtEmailId.text == "charmi" && txtPassword.text == "patel"
+        )
+        {
             
         }
         
