@@ -16,6 +16,15 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var btnLogin: UIButton!
     
     @IBAction func btnLogin(_ sender: UIButton) {
+        if (txtEmailId.text == "" || txtPassword.text == "")
+        {
+            let alert = UIAlertController(title: "Alert", message: "EmailId or password is empty", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Continue", style: .default, handler: nil)
+            alert.addAction(action)
+            self.present(alert,animated: true)
+            
+        }
+        
     }
     
     override func viewDidLoad() {
