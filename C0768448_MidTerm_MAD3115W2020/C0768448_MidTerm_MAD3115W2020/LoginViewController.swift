@@ -34,8 +34,15 @@ class LoginViewController: UIViewController {
             let dashboardVC = storyboard.instantiateViewController(withIdentifier: "CustomerVC") as! CustomerTableViewController
             let navcon = UINavigationController(rootViewController: dashboardVC)
             
-            present(navcon, animated: true, completion: nil)
+            self.present(navcon, animated: true, completion: nil)
             
+        }
+        else
+        {
+            let alert = UIAlertController(title: "Invalid User", message: "Incorrect  Details", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true)
         }
         
         
