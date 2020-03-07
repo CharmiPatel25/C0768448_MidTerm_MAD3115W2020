@@ -10,6 +10,20 @@ import UIKit
 
 class AddNewCustomerViewController: UIViewController {
 
+    
+    @IBOutlet weak var txtCustId: UITextField!
+    
+    @IBOutlet weak var txtfirstName: UITextField!
+    
+    @IBOutlet weak var txtlastName: UITextField!
+    
+    @IBOutlet weak var txtEmailId: UITextField!
+    
+    @IBOutlet weak var btnSave: UIButton!
+    
+    @IBAction func btnSaveCustomer(_ sender: UIButton) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

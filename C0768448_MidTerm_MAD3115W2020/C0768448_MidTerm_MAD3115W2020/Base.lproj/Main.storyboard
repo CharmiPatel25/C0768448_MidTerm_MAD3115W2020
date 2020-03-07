@@ -204,12 +204,22 @@
                                 <rect key="frame" x="131" y="498" width="121" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="btnSaveCustomer:" destination="Trt-Ce-Y6f" eventType="touchUpInside" id="7uV-PX-Dip"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="a6s-98-rRk"/>
                     </view>
                     <navigationItem key="navigationItem" id="eg4-8B-fDS"/>
+                    <connections>
+                        <outlet property="btnSave" destination="NfO-Wa-zUX" id="mdl-dX-lyg"/>
+                        <outlet property="txtCustId" destination="wB2-9e-HYV" id="Us6-jD-KxY"/>
+                        <outlet property="txtEmailId" destination="Mlv-Y5-vgG" id="Cv6-LA-bzr"/>
+                        <outlet property="txtfirstName" destination="5nM-H0-YxB" id="gXd-57-VNt"/>
+                        <outlet property="txtlastName" destination="7u2-oB-J9w" id="3ij-gS-Jia"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OY1-Qr-UXQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
