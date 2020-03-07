@@ -10,9 +10,13 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+
     @IBOutlet weak var txtEmailId: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
-    @IBOutlet weak var RememberMe: UISwitch!
+    @IBOutlet weak var rememberMe: UISwitch!
+    
+    //@IBOutlet weak var btnLogin: UIButton!
+    
     @IBOutlet weak var btnLogin: UIButton!
     
     @IBAction func btnLogin(_ sender: UIButton) {
@@ -26,10 +30,18 @@ class LoginViewController: UIViewController {
         else if(txtEmailId.text == "charmi" && txtPassword.text == "patel"
         )
         {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let dashboardVC = storyboard.instantiateViewController(withIdentifier: "CustomerVC") as! CustomerTableViewController
+            let navcon = UINavigationController(rootViewController: dashboardVC)
+            
+            present(navcon, animated: true, completion: nil)
             
         }
         
+        
     }
+    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
