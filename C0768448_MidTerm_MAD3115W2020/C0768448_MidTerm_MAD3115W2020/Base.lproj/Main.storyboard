@@ -111,6 +111,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="AXS-SH-hG4" id="yhY-EZ-TjB"/>
+                                    <outlet property="delegate" destination="AXS-SH-hG4" id="yO6-uK-25m"/>
+                                </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PGs-Zg-iji">
                                 <rect key="frame" x="0.0" y="90" width="414" height="44"/>
@@ -119,7 +123,7 @@
                                     <navigationItem title="Welcome" id="w2P-TS-Cuf">
                                         <barButtonItem key="leftBarButtonItem" title="Logout" id="mD1-Vu-7BS">
                                             <connections>
-                                                <action selector="btnLogout:" destination="AXS-SH-hG4" id="XX7-gw-Mbj"/>
+                                                <action selector="btnLogout:" destination="AXS-SH-hG4" id="uQz-xu-3oq"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title=" Add New " id="SEy-Mt-Kdb">

@@ -13,11 +13,11 @@ class CustomerListTableViewController: UIViewController {
     @IBOutlet weak var customerTableView: UITableView!
     
     @IBAction func btnLogout(_ sender: UIBarButtonItem) {
-        self.navigationController?.popToRootViewController(animated: true)
+         self.navigationController?.popToRootViewController(animated: true)
     }
     
-    
-     var customers:[Customer] = []
+  
+    var customers:[Customer] = []
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -26,6 +26,7 @@ class CustomerListTableViewController: UIViewController {
     }
 }
     
+
     extension CustomerListTableViewController: UITableViewDataSource,UITableViewDelegate
     {
         
