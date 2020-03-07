@@ -48,6 +48,10 @@ class AddNewCustomerViewController: UIViewController {
         {
         
         DataStorage.getInstance().addCustomer(customer: Customer(customerID: newCustID, firstName: newFirstName, lastName: newLastName, emailID: newEmail))
+            
+
+    self.navigationController?.popViewController(animated: true)
+            
         }
         
     }
