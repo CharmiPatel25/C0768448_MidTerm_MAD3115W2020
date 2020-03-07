@@ -9,7 +9,11 @@
 import UIKit
 
 class CustomerListTableViewController: UIViewController {
+    
+    @IBOutlet weak var customerTableView: UITableView!
+    
 
+     var customers:[Customer] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
