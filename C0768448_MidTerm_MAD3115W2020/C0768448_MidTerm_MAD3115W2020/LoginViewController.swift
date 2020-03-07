@@ -14,17 +14,32 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var txtEmailId: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var rememberMe: UISwitch!
+    @IBOutlet weak var btnLogin: UIButton!
     
-    @IBAction func rememberMe(_ sender: UISwitch) {
-        if rememberMe.isOn
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        rememberMeSwitchValue()
+        // Do any additional setup after loading the view.
+    }
+    
+    func rememberMeSwitchValue()
+    {
+        let userDefault = UserDefaults.standard
+        
+        if let userName = userDefault.string(forKey: "emailId")
         {
+            txtEmailId.text = userName
             
+            if let pwd = userDefault.string(forKey: "password")
+            {
+                txtPassword.text = pwd
+            }
         }
     }
     
-    @IBOutlet weak var btnLogin: UIButton!
     
     @IBAction func btnLogin(_ sender: UIButton) {
+        
         if (txtEmailId.text == "" || txtPassword.text == "")
         {
             let alert = UIAlertController(title: "Alert", message: "EmailID or password is empty", preferredStyle: .alert)
@@ -35,11 +50,19 @@ class LoginViewController: UIViewController {
         else if(txtEmailId.text == "charmi" && txtPassword.text == "patel"
         )
         {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let dashboardVC = storyboard.instantiateViewController(withIdentifier: "CustomerVC") as! CustomerTableViewController
-            let navcon = UINavigationController(rootViewController: dashboardVC)
             
-            self.present(navcon, animated: true, completion: nil)
+            let userDefault = UserDefaults.standard
+            if rememberMe.isOn
+            {
+                
+                userDefault.setValue(txtEmailId.text, forKey: "emailId")
+                userDefault.set(txtPassword.text, forKey: "password")
+            }
+            else
+            {
+                userDefault.removeObject(forKey: "userEmail")
+                userDefault.removeObject(forKey: "userPassword")
+            }
             
         }
         else
@@ -49,16 +72,13 @@ class LoginViewController: UIViewController {
             alert.addAction(action)
             self.present(alert, animated: true)
         }
-        
-        
     }
+    
+    
     
    
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+    
 
 
 }
