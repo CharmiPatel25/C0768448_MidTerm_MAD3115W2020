@@ -34,11 +34,22 @@ class CustomerListTableViewController: UIViewController {
         }
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            <#code#>
+            return customers.count
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            <#code#>
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerCell")
+            let customer = customers[indexPath.row]
+            cell?.textLabel?.text = customer.fullName
+            return cell!
+        }
+        
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+        {
+            let c = customers[indexPath.row]
+            print(c.fullName)
+            self.performSegue(withIdentifier: "segueBillDetails", sender: self)
+            
         }
         
         
