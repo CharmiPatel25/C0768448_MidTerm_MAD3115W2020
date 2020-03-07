@@ -87,10 +87,10 @@
             </objects>
             <point key="canvasLocation" x="1202.8985507246377" y="-108.48214285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Customer List Table View Controller-->
         <scene sceneID="pH0-ep-urh">
             <objects>
-                <viewController id="AXS-SH-hG4" sceneMemberID="viewController">
+                <viewController id="AXS-SH-hG4" customClass="CustomerListTableViewController" customModule="C0768448_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xLI-w3-MtV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,15 +115,18 @@
                         <viewLayoutGuide key="safeArea" id="WnI-cq-VOL"/>
                     </view>
                     <navigationItem key="navigationItem" id="vLT-s4-JC8"/>
+                    <connections>
+                        <outlet property="customerTableView" destination="WK3-uC-T5M" id="Udy-ub-WW3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IeX-pA-Ael" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1986.9565217391305" y="-110.49107142857143"/>
         </scene>
-        <!--View Controller-->
+        <!--Add New Customer View Controller-->
         <scene sceneID="DxP-Lg-RnM">
             <objects>
-                <viewController id="Trt-Ce-Y6f" sceneMemberID="viewController">
+                <viewController id="Trt-Ce-Y6f" customClass="AddNewCustomerViewController" customModule="C0768448_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="alR-ws-OIb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,10 +147,10 @@
             </objects>
             <point key="canvasLocation" x="2851" y="-162"/>
         </scene>
-        <!--View Controller-->
+        <!--Show Bill Details View Controller-->
         <scene sceneID="dWA-Zy-bd4">
             <objects>
-                <viewController id="Fp3-Ke-crx" sceneMemberID="viewController">
+                <viewController id="Fp3-Ke-crx" customClass="ShowBillDetailsViewController" customModule="C0768448_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XAb-BR-Eec">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
