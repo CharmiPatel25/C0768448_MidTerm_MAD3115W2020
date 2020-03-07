@@ -10,11 +10,21 @@ import UIKit
 
 class ShowBillDetailsViewController: UIViewController {
 
+    var customers:Customer?
+    
+    @IBOutlet weak var lblCustID: UILabel!
+    @IBOutlet weak var lblFirstName: UILabel!
+    
+    @IBOutlet weak var lblLastName: UILabel!
+    
+    @IBOutlet weak var lblEmailID: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.lblCustID.text = customers?.customerID
+        self.lblFirstName.text = customers?.firstName
+        self.lblLastName.text = customers?.lastName
+        self.lblEmailID.text = customers?.emailID
     }
     
 

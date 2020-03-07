@@ -336,6 +336,12 @@
                         <viewLayoutGuide key="safeArea" id="PEp-VO-3TW"/>
                     </view>
                     <navigationItem key="navigationItem" id="M69-Ay-YnI"/>
+                    <connections>
+                        <outlet property="lblCustID" destination="sSc-aS-ej3" id="Ma5-cK-Zll"/>
+                        <outlet property="lblEmailID" destination="UI7-W1-F97" id="41m-dS-cjo"/>
+                        <outlet property="lblFirstName" destination="kCL-ru-G1o" id="eaT-Cx-DCg"/>
+                        <outlet property="lblLastName" destination="WjG-pI-bjg" id="Rd4-je-hth"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R1Q-vG-aTb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
