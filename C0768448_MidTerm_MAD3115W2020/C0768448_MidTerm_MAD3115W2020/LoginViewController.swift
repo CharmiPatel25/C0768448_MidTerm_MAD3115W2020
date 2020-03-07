@@ -15,7 +15,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var rememberMe: UISwitch!
     
-    //@IBOutlet weak var btnLogin: UIButton!
+    @IBAction func rememberMe(_ sender: UISwitch) {
+        if rememberMe.isOn
+        {
+            
+        }
+    }
     
     @IBOutlet weak var btnLogin: UIButton!
     
@@ -39,7 +44,7 @@ class LoginViewController: UIViewController {
         }
         else
         {
-            let alert = UIAlertController(title: "Invalid User", message: "Incorrect  Details", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Invalid User", message: "Incorrect EmailID or password!", preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .default, handler: nil)
             alert.addAction(action)
             self.present(alert, animated: true)
