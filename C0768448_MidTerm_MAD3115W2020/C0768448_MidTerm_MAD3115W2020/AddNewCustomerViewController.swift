@@ -22,13 +22,51 @@ class AddNewCustomerViewController: UIViewController {
     @IBOutlet weak var btnSave: UIButton!
     
     @IBAction func btnSaveCustomer(_ sender: UIButton) {
+        
+        let newCustID=txtCustId.text ?? ""
+        let newFirstName=txtfirstName.text ?? ""
+        let newLastName=txtlastName.text ?? ""
+        let newEmail=txtEmailId.text ?? ""
+        
+        if txtCustId.text == ""
+        {
+            showAlertMessage(message: "Enter ID")
+        }
+        else if txtfirstName.text == ""
+        {
+            showAlertMessage(message: "Enter First name ")
+        }
+        else if txtlastName.text == ""
+        {
+            showAlertMessage(message: "Enter Last name")
+        }
+        else if txtEmailId.text == ""
+        {
+            showAlertMessage(message: "Enter EmailID")
+        }
+        else
+        {
+        
+        DataStorage.getInstance().addCustomer(customer: Customer(customerID: newCustID, firstName: newFirstName, lastName: newLastName, emailID: newEmail))
+        }
+        
     }
     
+    var newCustomer:[Customer] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    func showAlertMessage(message: String)
+    {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(okButton)
+        self.present(alert, animated: true)
+    }
+    
     
 
     /*
