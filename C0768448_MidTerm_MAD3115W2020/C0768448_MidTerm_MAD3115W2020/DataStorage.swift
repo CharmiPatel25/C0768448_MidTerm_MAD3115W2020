@@ -30,11 +30,11 @@ class DataStorage
     func loadData()
     {
         
-        customerList.updateValue(Customer(customerID: "C001", firstName: "Jon", lastName: "Snow", emailID: "jonsnow@gmail.com"), forKey: "C01")
-        customerList.updateValue(Customer(customerID: "C002", firstName: "Sansa", lastName: "Stark", emailID: "sansa@gmail.com"), forKey: "C02")
-        customerList.updateValue(Customer(customerID: "C003", firstName: "Joffery", lastName: "Batatheon", emailID: "joffery@gmail.com"), forKey: "C03")
-        customerList.updateValue(Customer(customerID: "C004", firstName: "Ned", lastName: "Mormont", emailID: "ned@gmail.com"), forKey: "C04")
-        customerList.updateValue(Customer(customerID: "C005", firstName: "Danerys", lastName: "Targeryen", emailID: "danny@gmail.com"), forKey: "C05")
+        customerList.updateValue(Customer(customerID: "C001", firstName: "Jon", lastName: "Snow", emailID: "jonsnow@gmail.com"), forKey: "C001")
+        customerList.updateValue(Customer(customerID: "C002", firstName: "Sansa", lastName: "Stark", emailID: "sansa@gmail.com"), forKey: "C002")
+        customerList.updateValue(Customer(customerID: "C003", firstName: "Joffery", lastName: "Batatheon", emailID: "joffery@gmail.com"), forKey: "C003")
+        customerList.updateValue(Customer(customerID: "C004", firstName: "Ned", lastName: "Mormont", emailID: "ned@gmail.com"), forKey: "C004")
+        customerList.updateValue(Customer(customerID: "C005", firstName: "Danerys", lastName: "Targeryen", emailID: "danny@gmail.com"), forKey: "C005")
         
         
         

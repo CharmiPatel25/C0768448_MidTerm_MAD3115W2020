@@ -12,21 +12,23 @@ class CustomerListTableViewController: UIViewController {
     
     @IBOutlet weak var customerTableView: UITableView!
     
-
+    @IBAction func btnLogout(_ sender: UIBarButtonItem) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    
      var customers:[Customer] = []
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        
         self.navigationItem.hidesBackButton = true
         customers = DataStorage.getInstance().getAllCustomers()
-
-        // Do any additional setup after loading the view.
     }
 }
     
-    
-    extension CustomerListTableViewController: UITableViewDataSource, UITableViewDelegate
+    extension CustomerListTableViewController: UITableViewDataSource,UITableViewDelegate
     {
+        
         
         func numberOfSections(in tableView: UITableView) -> Int
         {
@@ -57,14 +59,6 @@ class CustomerListTableViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 
