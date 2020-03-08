@@ -49,9 +49,17 @@ class CustomerListTableViewController: UIViewController {
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
         {
-            let c = customers[indexPath.row]
-            print(c.fullName)
-            self.performSegue(withIdentifier: "segueBillDetails", sender: self)
+            
+            let customers = DataStorage.getInstance().getAllCustomers()
+            let selectedCustomer = customers[indexPath.row]
+            
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let detailedCustomerVC = sb.instantiateViewController(identifier: "custDetailsVC") as ShowBillDetailsViewController
+            detailedCustomerVC.customers = selectedCustomer
+            self.navigationController?.pushViewController(detailedCustomerVC, animated: true)
+            
+            
+    
             
         }
         

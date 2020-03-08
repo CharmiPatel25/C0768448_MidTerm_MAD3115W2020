@@ -18,6 +18,7 @@ class ShowBillDetailsViewController: UIViewController {
     @IBOutlet weak var lblLastName: UILabel!
     
     @IBOutlet weak var lblEmailID: UILabel!
+    @IBOutlet weak var imgBill: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,11 @@ class ShowBillDetailsViewController: UIViewController {
         self.lblFirstName.text = customers?.firstName
         self.lblLastName.text = customers?.lastName
         self.lblEmailID.text = customers?.emailID
+        
+        
     }
+    
+    
     
 
     /*
