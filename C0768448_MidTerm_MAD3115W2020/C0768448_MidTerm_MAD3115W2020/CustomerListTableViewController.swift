@@ -52,11 +52,10 @@ class CustomerListTableViewController: UIViewController {
             
             let customers = DataStorage.getInstance().getAllCustomers()
             let selectedCustomer = customers[indexPath.row]
-            
             let sb = UIStoryboard(name: "Main", bundle: nil)
-            let detailedCustomerVC = sb.instantiateViewController(identifier: "custDetailsVC") as ShowBillDetailsViewController
-            detailedCustomerVC.customers = selectedCustomer
-            self.navigationController?.pushViewController(detailedCustomerVC, animated: true)
+            let custDetailsVC = sb.instantiateViewController(identifier: "custDetailsVC") as ShowBillDetailsViewController
+            custDetailsVC.customers = selectedCustomer
+            self.navigationController?.pushViewController(custDetailsVC, animated: true)
             
             
     
