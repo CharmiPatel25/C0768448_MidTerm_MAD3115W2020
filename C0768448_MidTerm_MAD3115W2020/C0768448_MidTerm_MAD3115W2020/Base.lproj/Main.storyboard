@@ -225,7 +225,7 @@
                                 <rect key="frame" x="121" y="480" width="172" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.56040637231440116" green="0.68854170469616582" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="btnSaveCustomer:" destination="Trt-Ce-Y6f" eventType="touchUpInside" id="7uV-PX-Dip"/>

@@ -24,6 +24,8 @@ class CustomerListTableViewController: UIViewController {
         self.navigationItem.hidesBackButton = true
         customers = DataStorage.getInstance().getAllCustomers()
     }
+    
+    
 }
     
 
