@@ -11,7 +11,7 @@ class DataStorage
 {
     
     private static let instance = DataStorage()
-    private lazy var customerList = Dictionary<String,Customer>()
+    lazy var customerList = Dictionary<String,Customer>()
 
     private init(){}
 

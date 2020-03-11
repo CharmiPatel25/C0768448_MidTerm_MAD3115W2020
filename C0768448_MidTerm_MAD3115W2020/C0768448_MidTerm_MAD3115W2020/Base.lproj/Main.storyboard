@@ -292,7 +292,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tiB-6P-nuH">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="receiptdollar" translatesAutoresizingMaskIntoConstraints="NO" id="tiB-6P-nuH">
                                                     <rect key="frame" x="34" y="25" width="125" height="83"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -449,6 +449,7 @@
     </scenes>
     <resources>
         <image name="CustIcon.png" width="219" height="230"/>
+        <image name="receiptdollar" width="100" height="100"/>
         <image name="showBill" width="860" height="261"/>
     </resources>
 </document>

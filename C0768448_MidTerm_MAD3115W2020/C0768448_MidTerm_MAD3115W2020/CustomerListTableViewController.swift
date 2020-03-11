@@ -11,10 +11,6 @@ import UIKit
 class CustomerListTableViewController: UIViewController {
     
     @IBOutlet weak var customerTableView: UITableView!
-    
-    
-    
-    
     override func viewDidLoad() {
             super.viewDidLoad()
             self.addlogOutButton()
@@ -62,7 +58,7 @@ class CustomerListTableViewController: UIViewController {
            }
            func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
            {
-            return DataStorage.getInstance().cus
+            return DataStorage.getInstance().customerList.count
            }
            
            func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
