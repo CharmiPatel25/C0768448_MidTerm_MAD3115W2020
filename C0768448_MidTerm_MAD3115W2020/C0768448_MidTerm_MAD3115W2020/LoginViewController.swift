@@ -18,69 +18,66 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        rememberMeSwitchValue()
-        // Do any additional setup after loading the view.
+        txtEmailId.text = ""
+        txtPassword.text = ""
+        let ud = UserDefaults.standard
+        let name = ud.string(forKey:"name")
+        let password = ud.string(forKey: "password")
+        self.navigationItem.hidesBackButton = true
+        if let nm = name
+            {
+                txtEmailId.text = nm
+            }
+        if let pw  = password
+            {
+                txtPassword.text = pw
+            }
     }
     
-    func rememberMeSwitchValue()
-    {
-        let userDefault = UserDefaults.standard
-        
-        if let userName = userDefault.string(forKey: "emailId")
-        {
-            txtEmailId.text = userName
-            
-            if let pwd = userDefault.string(forKey: "password")
-            {
-                txtPassword.text = pwd
-            }
-        }
-    }
     
     
     @IBAction func btnLogin(_ sender: UIButton) {
         
+        
+        
         if (txtEmailId.text == "" || txtPassword.text == "")
-        {
-            let alert = UIAlertController(title: "Alert", message: "EmailID or password is empty", preferredStyle: .alert)
-            let action = UIAlertAction(title: "Continue", style: .default, handler: nil)
-            alert.addAction(action)
-            self.present(alert,animated: true)
-        }
-        else if(txtEmailId.text == "charmi" && txtPassword.text == "patel"
-        )
-        {
-            
-            let userDefault = UserDefaults.standard
-            if rememberMe.isOn
             {
-                
-                userDefault.setValue(txtEmailId.text, forKey: "emailId")
-                userDefault.set(txtPassword.text, forKey: "password")
+          let alertController = UIAlertController(title: "Error", message: "Username/Password cannot be Empty", preferredStyle: .alert)
+          alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+          self.present(alertController, animated: true, completion: nil)
             }
-            else
-            {
-                userDefault.removeObject(forKey: "userEmail")
-                userDefault.removeObject(forKey: "userPassword")
-            }
-            
-        }
-        else
+
+        let customers = DataStorage.getInstance().dictionaryToArray()
+        
+        for i in customers
         {
-            let alert = UIAlertController(title: "Invalid User", message: "Incorrect EmailID or password!", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alert.addAction(action)
-            self.present(alert, animated: true)
+            if (txtEmailId.text == i.userName && txtPassword.text == i.password)
+            {
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                let customerListTableVC = sb.instantiateViewController(identifier: "customerListTableVC") as! CustomerListTableViewController
+                navigationController?.pushViewController(customerListTableVC, animated: true)
+
+                if rememberMe.isOn
+                    {
+                    let defaults = UserDefaults.standard
+                        _ = defaults.set(txtEmailId.text, forKey: "name")
+                        _ = defaults.set(txtPassword.text, forKey: "password")
+                    }
+                    
+                else{
+                    UserDefaults.standard.removeObject(forKey: "name")
+                    UserDefaults.standard.removeObject(forKey: "password")
+                }
+                return
+            }
         }
-    }
-    
-    
-    
-   
-    
-    
+                let alertController = UIAlertController(title: "Error", message: "Incorrect username/  or password", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                self.present(alertController, animated: true, completion: nil)
+        
 
 
+ }
 }
 
 

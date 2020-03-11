@@ -40,14 +40,14 @@ class DataStorage
         
         
         let m1 =  Mobile(billId: "MB001", billDate: formatter.date(from: "2019/10/12")!, billType: BillType.Mobile, manufacturerName: "APPLE INC.", planName: "Unlimited Plan", mobileNumber: "1245789635", mobGbUsed: 2, minute: 15)
-        let m2 = Mobile(billId: "MB002", billDate: formatter.date(from: "2019/06/18")!, billType: BillType.Mobile, manufacturerName: "FIDO", planName: "LTE+3G 9.5GB Promo plan", mobileNumber: "4371029230", mobGbUsed: 2, minute: 11)
+        let m2 = Mobile(billId: "MB002", billDate: formatter.date(from: "2019/06/18")!, billType: BillType.Mobile, manufacturerName: "Lucky", planName: "LTE+3G 6GB Promo plan", mobileNumber: "4371029230", mobGbUsed: 2, minute: 11)
         
-        let h1 = Hydro(billId: "HY001", billDate: formatter.date(from: "2019/09/12")!, billType: BillType.Hydro, agencyName: "PUREWATA", unitsUsed: 22.21)
-        let h2 = Hydro(billId: "HY002", billDate: formatter.date(from: "2019/05/15")!, billType: BillType.Hydro, agencyName: "LIFELINE", unitsUsed: 8.2)
+        let h1 = Hydro(billId: "HY001", billDate: formatter.date(from: "2019/09/12")!, billType: BillType.Hydro, agencyName: "Reliance", unitsUsed: 20)
+        let h2 = Hydro(billId: "HY002", billDate: formatter.date(from: "2019/05/15")!, billType: BillType.Hydro, agencyName: "Tata", unitsUsed: 7)
         
         
-        let in1 = Internet(billId: "IN001", billDate: formatter.date(from: "2019/09/20")!, billType: BillType.Internet, providerName: "SKYLINK", gbUsed: 22.8)
-        let in2 = Internet(billId: "IN002", billDate: formatter.date(from: "2019/10/12")!, billType: BillType.Internet, providerName: "STARLIGHT", gbUsed: 6.2)
+        let in1 = Internet(billId: "IN001", billDate: formatter.date(from: "2019/09/20")!, billType: BillType.Internet, providerName: "Rogers", gbUsed: 15)
+        let in2 = Internet(billId: "IN002", billDate: formatter.date(from: "2019/10/12")!, billType: BillType.Internet, providerName: "Oceans", gbUsed: 6)
            c1.newBill(bill: m1, billId: "MB100")
            c2.newBill(bill: h2, billId: "HY200")
            c2.newBill(bill: in2, billId: "IN002")
@@ -60,6 +60,14 @@ class DataStorage
            addCustomer(customer: c3)
         
         
+    }
+    
+    func dictionaryToArray() -> [Customer]{
+    var customerListStorage: [Customer] = []
+    for i in customerList{
+        customerListStorage.append(i.value)
+     }
+    return customerListStorage
     }
     
 }
