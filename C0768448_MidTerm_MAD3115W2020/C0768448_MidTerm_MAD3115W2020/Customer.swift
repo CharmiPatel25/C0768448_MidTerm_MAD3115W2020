@@ -18,11 +18,41 @@ class Customer
     }
     var emailID:String
     var totalBillToPay : Double = 0.0
-     
-    init(customerID:String, firstName:String, lastName:String, emailID:String) {
-      self.customerID=customerID
-      self.firstName=firstName
-      self.lastName=lastName
-      self.emailID=emailID
+    var userName: String?
+    var password:String?
+    var dateOfBirth: String?
+    lazy var customerBills = [String: Bill]()
+    
+    
+    init(customerId: String, firstName: String,lastName: String, email: String, userName: String, password: String, dateOfBirth: String) {
+        self.customerID = customerId
+        self.firstName   = firstName
+        self.emailID = email
+        self.userName = userName
+        self.password = password
+        self.dateOfBirth = dateOfBirth
+        
     }
+    
+    func newBill(bill: Bill, billId: String)
+        {
+          customerBills.updateValue(bill, forKey: billId)
+        }
+    
+    func billsTotal() -> Double
+    {
+      var allTotal2 = 0.0
+      for i in customerBills{
+        allTotal2 += i.value.totalAmount
+      }
+      return allTotal2
+    }
+    
+    func getBills() -> [Bill]{
+        var bills = [Bill]()
+        for i in customerBills{
+            bills.append(i.value)
+        }
+        return bills
+}
 }
