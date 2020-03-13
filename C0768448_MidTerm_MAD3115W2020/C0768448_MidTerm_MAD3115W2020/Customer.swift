@@ -27,6 +27,7 @@ class Customer
     init(customerId: String, firstName: String,lastName: String, email: String, userName: String, password: String, dateOfBirth: String) {
         self.customerID = customerId
         self.firstName   = firstName
+        self.lastName = lastName
         self.emailID = email
         self.userName = userName
         self.password = password

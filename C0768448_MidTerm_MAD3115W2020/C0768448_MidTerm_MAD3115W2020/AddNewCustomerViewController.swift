@@ -19,68 +19,57 @@ class AddNewCustomerViewController: UIViewController {
     
     @IBOutlet weak var txtEmailId: UITextField!
     
-    @IBOutlet weak var btnSave: UIButton!
+  
+    @IBOutlet weak var txtBirthDate: UITextField!
     
-    @IBAction func btnSaveCustomer(_ sender: UIButton) {
+   
+    @IBOutlet weak var txtUserName: UITextField!
+    
+    @IBOutlet weak var txtPassword: UITextField!
+    
+    
+    @IBAction func btnAddNewCustomer(_ sender: UIButton) {
+        if(txtCustId.text == "" || txtfirstName.text == "" || txtlastName.text == "" || txtEmailId.text == "" || txtBirthDate.text == "" || txtUserName.text == "" || txtPassword.text == "")
+        {
+            let alertController = UIAlertController(title:"Error", message: "Cannot leave field Empty.Please fill all fields!", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        let c = Customer(customerId: txtCustId.text!, firstName: txtfirstName.text!, lastName: txtlastName.text!, email: txtEmailId.text!, userName: txtUserName.text!, password: txtPassword.text!, dateOfBirth: txtBirthDate.text!)
         
-        let newCustID=txtCustId.text ?? ""
-        let newFirstName=txtfirstName.text ?? ""
-        let newLastName=txtlastName.text ?? ""
-        let newEmail=txtEmailId.text ?? ""
+        DataStorage.getInstance().addCustomer(customer: c)
         
-        if txtCustId.text == ""
-        {
-            showAlertMessage(message: "Enter ID")
-        }
-        else if txtfirstName.text == ""
-        {
-            showAlertMessage(message: "Enter First name ")
-        }
-        else if txtlastName.text == ""
-        {
-            showAlertMessage(message: "Enter Last name")
-        }
-        else if txtEmailId.text == ""
-        {
-            showAlertMessage(message: "Enter EmailID")
-        }
-        else
-        {
         
-        DataStorage.getInstance().addCustomer(customer: Customer(customerID: newCustID, firstName: newFirstName, lastName: newLastName, emailID: newEmail))
-            
-
-    self.navigationController?.popViewController(animated: true)
-            
-        }
-        
+        let alertController = UIAlertController(title: "Success", message: "Customer Added Successfully", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in self.exitView()}))
+        self.present(alertController, animated: true, completion: nil)
     }
     
-    var newCustomer:[Customer] = []
+    func exitView()
+    {
+
+        navigationController?.popViewController(animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.title = "NEW CUSTOMER"
+        self.txtBirthDate.viewDatePicker(target: self, selector: #selector(clickDate))
+        
     }
     
-    func showAlertMessage(message: String)
-    {
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        let okButton = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        alert.addAction(okButton)
-        self.present(alert, animated: true)
-    }
-    
+   
+    @objc func clickDate() {
+           if let datePicker = self.txtBirthDate.inputView as? UIDatePicker {
+               let dateformatter = DateFormatter()
+               dateformatter.dateStyle = .medium
+               self.txtBirthDate.text = dateformatter.string(from: datePicker.date)
+           }
+           self.txtBirthDate.resignFirstResponder() 
+       }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }
