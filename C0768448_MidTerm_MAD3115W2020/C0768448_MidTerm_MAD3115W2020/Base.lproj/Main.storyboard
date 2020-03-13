@@ -444,7 +444,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhh-iV-UBX">
-                                <rect key="frame" x="208" y="373" width="42" height="21"/>
+                                <rect key="frame" x="208" y="373" width="171" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -479,6 +479,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Vfy-Sy-tMI"/>
                     </view>
+                    <connections>
+                        <outlet property="imgBill" destination="gO3-sk-3dV" id="p2I-1F-8MY"/>
+                        <outlet property="lblCustID" destination="sSc-aS-ej3" id="0lb-Or-sCk"/>
+                        <outlet property="lblDateOfBirth" destination="Qhh-iV-UBX" id="VRQ-Ht-fmE"/>
+                        <outlet property="lblEmailId" destination="UI7-W1-F97" id="1d5-9O-cli"/>
+                        <outlet property="lblFirstName" destination="kCL-ru-G1o" id="fj4-0l-Mkj"/>
+                        <outlet property="lblLastName" destination="WjG-pI-bjg" id="d6c-4z-dxR"/>
+                        <outlet property="lblUserName" destination="GdQ-h9-8Wu" id="Kw3-EW-a4f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r6R-NX-XNe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

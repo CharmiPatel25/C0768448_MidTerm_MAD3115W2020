@@ -14,11 +14,8 @@ class ShowBillDetailsViewController: UIViewController {
     
     @IBOutlet weak var lblCustID: UILabel!
     @IBOutlet weak var lblFirstName: UILabel!
-    
     @IBOutlet weak var lblLastName: UILabel!
-    
     @IBOutlet weak var lblEmailID: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.lblCustID.text = customers?.customerID
@@ -29,15 +26,5 @@ class ShowBillDetailsViewController: UIViewController {
     
     
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
