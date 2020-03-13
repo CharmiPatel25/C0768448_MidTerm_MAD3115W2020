@@ -43,3 +43,42 @@ class ShowBillDetailsViewController: UIViewController {
     }
 }
 
+extension ShowBillDetailsViewController: UITableViewDataSource, UITableViewDelegate
+{
+    func numberOfSections(in tableView: UITableView) -> Int
+    {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return self.bills.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BillDetailTableViewCell") as! BillDetailTableViewCell
+        let billList = bills[indexPath.row]
+        if billList.billID.contains("MB"){
+            cell.lblBillID?.text = billList.billID
+            cell.lblBillDate?.text = billList.billDate.formatDate()
+            cell.lblBillAmt.text = String(format:"$%.2f", billList.billCalculate())
+        }
+        if billList.billID.contains("HY")
+        {
+            cell.lblBillID?.text = billList.billID
+            cell.lblBillDate?.text = billList.billDate.formatDate()
+            cell.lblBillAmt.text = String(format:"$%.2f", billList.billCalculate())
+        }
+        if billList.billID.contains("IN")
+        {
+            cell.lblBillID?.text = billList.billID
+            cell.lblBillDate?.text = billList.billDate.formatDate()
+        cell.lblBillAmt.text = String(format:"$%.2f", billList.billCalculate())
+        }
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(150.0)
+    }
+ }
+

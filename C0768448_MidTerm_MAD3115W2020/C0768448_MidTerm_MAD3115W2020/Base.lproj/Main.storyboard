@@ -285,11 +285,11 @@
                                 <rect key="frame" x="0.0" y="100" width="414" height="595"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="132" id="KcV-8Z-Jaq">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="132"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="155" id="KcV-8Z-Jaq" customClass="BillDetailTableViewCell" customModule="C0768448_MidTerm_MAD3115W2020" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="155"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KcV-8Z-Jaq" id="1PH-IE-NTE">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="132"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="155"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bill ID : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYH-PL-bj8">
@@ -340,8 +340,18 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgBillSign" destination="tiB-6P-nuH" id="ZH3-up-eBf"/>
+                                            <outlet property="lblBillAmt" destination="xdb-ZO-rP9" id="CNH-ok-u9I"/>
+                                            <outlet property="lblBillDate" destination="uca-CZ-uGM" id="L97-Fd-i1C"/>
+                                            <outlet property="lblBillID" destination="Zbi-D6-trE" id="D8D-W7-fF6"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Fp3-Ke-crx" id="L9w-xv-L4T"/>
+                                    <outlet property="delegate" destination="Fp3-Ke-crx" id="xsj-x5-HHs"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Bill : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyl-yS-2bB">
                                 <rect key="frame" x="20" y="777" width="156" height="41"/>
@@ -369,10 +379,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="M69-Ay-YnI"/>
                     <connections>
-                        <outlet property="lblCustID" destination="sSc-aS-ej3" id="Ma5-cK-Zll"/>
-                        <outlet property="lblEmailID" destination="UI7-W1-F97" id="41m-dS-cjo"/>
-                        <outlet property="lblFirstName" destination="kCL-ru-G1o" id="eaT-Cx-DCg"/>
-                        <outlet property="lblLastName" destination="WjG-pI-bjg" id="Rd4-je-hth"/>
                         <outlet property="lblTotalBill" destination="JjC-pC-Nkq" id="kyF-2Z-osa"/>
                         <outlet property="tblBills" destination="rS5-7i-hzy" id="3gV-mn-YUe"/>
                     </connections>
