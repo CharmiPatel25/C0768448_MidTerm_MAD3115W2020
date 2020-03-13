@@ -517,6 +517,9 @@
                                     <segment title="Hydro"/>
                                     <segment title="Internet"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentBillType:" destination="MHc-g7-1t1" eventType="valueChanged" id="utS-e9-9qr"/>
+                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3R9-Oo-dyp">
                                 <rect key="frame" x="194" y="207" width="200" height="34"/>
@@ -558,6 +561,9 @@
                                 <rect key="frame" x="105" y="805" width="193" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ADD"/>
+                                <connections>
+                                    <action selector="btnAddBill:" destination="MHc-g7-1t1" eventType="touchUpInside" id="hVK-AT-29D"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bill ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpr-Xx-EAa">
                                 <rect key="frame" x="20" y="207" width="43" height="21"/>
@@ -618,6 +624,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Yfh-wc-vGf"/>
                     </view>
+                    <connections>
+                        <outlet property="segBillType" destination="7QT-at-Smp" id="g7g-ru-H6J"/>
+                        <outlet property="txtBillDate" destination="jbp-Rb-5GV" id="pQv-6h-KHt"/>
+                        <outlet property="txtBillID" destination="3R9-Oo-dyp" id="yVe-h9-FsF"/>
+                        <outlet property="txtHydroProvider" destination="AjV-uc-g3Y" id="JR2-Wq-7yE"/>
+                        <outlet property="txtHydroUnits" destination="ybS-1I-nFH" id="PQs-ZX-Ysn"/>
+                        <outlet property="txtInternetData" destination="ybS-1I-nFH" id="Cx2-mc-Ljc"/>
+                        <outlet property="txtInternetProvider" destination="AjV-uc-g3Y" id="vAD-Kf-dUm"/>
+                        <outlet property="txtMobileData" destination="IZ0-6L-3lo" id="1QM-9z-HmW"/>
+                        <outlet property="txtMobileManufacture" destination="AjV-uc-g3Y" id="9Oh-4l-sad"/>
+                        <outlet property="txtMobileMins" destination="5qr-2q-ZdJ" id="fDi-ng-qOw"/>
+                        <outlet property="txtMobileNumber" destination="qW1-Y9-XJV" id="zhN-12-Icm"/>
+                        <outlet property="txtMobilePlan" destination="ybS-1I-nFH" id="kZE-tc-z4B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJv-LU-RHb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
