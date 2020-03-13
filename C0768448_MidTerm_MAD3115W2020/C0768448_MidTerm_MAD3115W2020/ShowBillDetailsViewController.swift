@@ -14,12 +14,11 @@ class ShowBillDetailsViewController: UIViewController {
     var bills = [Bill]()
    
     @IBOutlet weak var tblBills: UITableView!
-    
     @IBOutlet weak var lblTotalBill: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.bills = (customerBill?.getBills())!
         self.lblTotalBill.text = String(format:"$%.2f", ((customerBill?.billsTotal())!))
         self.addBillButton()
     }

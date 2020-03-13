@@ -11,14 +11,11 @@ import UIKit
 class AddNewBillViewController: UIViewController {
     
     @IBOutlet weak var segBillType: UISegmentedControl!
-    
     @IBOutlet weak var txtBillID: UITextField!
     @IBOutlet weak var txtBillDate: UITextField!
-    
     @IBOutlet weak var txtMobileMins: UITextField!
     @IBOutlet weak var txtMobileData: UITextField!
     @IBOutlet weak var txtMobileNumber: UITextField!
-    
     @IBOutlet weak var txtMobileManufacture: UITextField!
     @IBOutlet weak var txtMobilePlan: UITextField!
     @IBOutlet weak var txtHydroProvider: UITextField!
