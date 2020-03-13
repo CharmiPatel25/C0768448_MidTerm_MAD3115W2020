@@ -79,7 +79,7 @@ class CustomerListTableViewController: UIViewController {
                 let billDetails = sb.instantiateViewController(identifier: "showBillDetailsVC") as ShowBillDetailsViewController
                 detailCustomerVC.customers = selectedCustomer
                 billDetails.customerBill = selectedCustomer
-                self.navigationController?.pushViewController(detailedCustomerVC, animated: true)
+                self.navigationController?.pushViewController(detailCustomerVC, animated: true)
             }
     
     
