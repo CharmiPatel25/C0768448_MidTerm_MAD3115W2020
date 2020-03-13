@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import UIKit
+extension Date{
+
+public func formatDate() -> String
+ {
+     let dateFormatter = DateFormatter()
+     dateFormatter.dateFormat = "MMM dd, yyyy"
+     let formattedDate = dateFormatter.string(from: self)
+     return formattedDate
+ }
+}
