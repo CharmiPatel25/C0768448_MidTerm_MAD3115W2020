@@ -27,7 +27,6 @@ class AddNewCustomerViewController: UIViewController {
     
     @IBOutlet weak var txtPassword: UITextField!
     
-    
     @IBAction func btnAddNewCustomer(_ sender: UIButton) {
         if(txtCustId.text == "" || txtfirstName.text == "" || txtlastName.text == "" || txtEmailId.text == "" || txtBirthDate.text == "" || txtUserName.text == "" || txtPassword.text == "")
         {
@@ -45,6 +44,8 @@ class AddNewCustomerViewController: UIViewController {
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in self.exitView()}))
         self.present(alertController, animated: true, completion: nil)
     }
+    
+
     
     func exitView()
     {
