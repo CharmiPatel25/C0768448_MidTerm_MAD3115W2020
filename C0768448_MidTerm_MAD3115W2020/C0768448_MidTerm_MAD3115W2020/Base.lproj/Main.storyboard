@@ -498,7 +498,7 @@
         <!--Add New Bill View Controller-->
         <scene sceneID="gw7-kS-yGM">
             <objects>
-                <viewController id="MHc-g7-1t1" customClass="AddNewBillViewController" customModule="C0768448_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addNewBillVC" id="MHc-g7-1t1" customClass="AddNewBillViewController" customModule="C0768448_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zqh-HR-z1w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
