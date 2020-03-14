@@ -544,6 +544,7 @@
                                     <segment title="Internet"/>
                                 </segments>
                                 <connections>
+                                    <action selector="segBillType:" destination="MHc-g7-1t1" eventType="valueChanged" id="DWN-SU-6DS"/>
                                     <action selector="segmentBillType:" destination="MHc-g7-1t1" eventType="valueChanged" id="utS-e9-9qr"/>
                                 </connections>
                             </segmentedControl>

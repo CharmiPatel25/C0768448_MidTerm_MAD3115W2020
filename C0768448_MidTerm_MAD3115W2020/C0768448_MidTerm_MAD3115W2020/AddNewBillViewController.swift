@@ -56,9 +56,9 @@ class AddNewBillViewController: UIViewController,UITextFieldDelegate {
           toolBar.sizeToFit()
            
           //Adding Button Toolbar
-          let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddBillViewController.doneClick))
+          let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddNewBillViewController.doneClick))
           let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-          let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(AddBillViewController.cancelClick))
+          let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(AddNewBillViewController.cancelClick))
           toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
           toolBar.isUserInteractionEnabled = true
           textField.inputAccessoryView = toolBar
@@ -78,7 +78,55 @@ class AddNewBillViewController: UIViewController,UITextFieldDelegate {
       txtBillDate.resignFirstResponder()
     }
    
+    @IBAction func segBillType(_ sender: UISegmentedControl) {
         
+        
+        if sender.selectedSegmentIndex == 0
+        {
+            txtBillID.isHidden = false
+            txtBillDate.isHidden = false
+            txtMobileManufacturer.isHidden = true
+            txtMobileMinuteUsed.isHidden = true
+            txtMobileNumber.isHidden = true
+            txtMobileGBUsed.isHidden = true
+            txtMobilePlan.isHidden = true
+            txtInternetProviderName.isHidden = true
+            txtInternetGBUsed.isHidden = true
+            txtHydroAgency.isHidden = false
+            txtHydroUnitConsumed.isHidden = false
+        }
+        else if sender.selectedSegmentIndex == 1
+        
+        {
+             txtBillID.isHidden = false
+             txtBillDate.isHidden = false
+             txtMobileManufacturer.isHidden = true
+             txtMobileMinuteUsed.isHidden = true
+             txtMobileNumber.isHidden = true
+             txtMobileGBUsed.isHidden = true
+             txtMobilePlan.isHidden = true
+             txtInternetProviderName.isHidden = false
+             txtInternetGBUsed.isHidden = false
+             txtHydroAgency.isHidden = true
+             txtHydroUnitConsumed.isHidden = true
+            
+        }
+        else if sender.selectedSegmentIndex == 2
+        {
+             txtBillID.isHidden = false
+             txtBillDate.isHidden = false
+             txtMobileManufacturer.isHidden = false
+             txtMobileMinuteUsed.isHidden = false
+             txtMobileNumber.isHidden = false
+             txtMobileGBUsed.isHidden = false
+             txtMobilePlan.isHidden = false
+             txtInternetProviderName.isHidden = true
+             txtInternetGBUsed.isHidden = true
+             txtHydroAgency.isHidden = true
+             txtHydroUnitConsumed.isHidden = true
+        }
+    }
+    
     
 
 }
