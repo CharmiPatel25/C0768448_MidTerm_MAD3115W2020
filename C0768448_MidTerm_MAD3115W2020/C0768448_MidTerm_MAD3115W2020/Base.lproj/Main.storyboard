@@ -559,32 +559,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Provider Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AjV-uc-g3Y">
-                                <rect key="frame" x="63" y="313" width="289" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile GB Used" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ybS-1I-nFH">
-                                <rect key="frame" x="65" y="383" width="289" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qW1-Y9-XJV">
-                                <rect key="frame" x="63" y="453" width="289" height="34"/>
+                                <rect key="frame" x="63" y="464" width="289" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="GB Used" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IZ0-6L-3lo">
-                                <rect key="frame" x="65" y="525" width="289" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile GB Used" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IZ0-6L-3lo">
+                                <rect key="frame" x="63" y="531" width="289" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tM4-gD-5Hy">
-                                <rect key="frame" x="86" y="697" width="193" height="30"/>
+                                <rect key="frame" x="86" y="810" width="193" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
@@ -596,31 +584,37 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minutes Used" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5qr-2q-ZdJ">
-                                <rect key="frame" x="65" y="598" width="289" height="34"/>
+                                <rect key="frame" x="61" y="586" width="289" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hydro Agency" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U1A-sF-AlQ">
-                                <rect key="frame" x="65" y="313" width="287" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Internet Provider" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FGs-Up-YMA">
+                                <rect key="frame" x="65" y="294" width="287" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Manufacturer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SYB-48-GT2">
-                                <rect key="frame" x="65" y="313" width="287" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile manifacture" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oxU-8a-fr6">
+                                <rect key="frame" x="63" y="352" width="289" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Plan" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xhv-XD-ROj">
-                                <rect key="frame" x="67" y="383" width="287" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Plan" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="17p-Xa-hOO">
+                                <rect key="frame" x="63" y="409" width="285" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hydro Units Used" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xvG-l3-yw0">
-                                <rect key="frame" x="66" y="383" width="287" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hydro Agency Name" textAlignment="natural" minimumFontSize="17" background="ydro Units Used" translatesAutoresizingMaskIntoConstraints="NO" id="bPf-yL-rga">
+                                <rect key="frame" x="59" y="640" width="289" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hydro Units Used" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i7u-ce-GhT">
+                                <rect key="frame" x="63" y="707" width="285" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -633,15 +627,14 @@
                         <outlet property="segBillType" destination="7QT-at-Smp" id="g7g-ru-H6J"/>
                         <outlet property="txtBillDate" destination="jbp-Rb-5GV" id="pQv-6h-KHt"/>
                         <outlet property="txtBillID" destination="3R9-Oo-dyp" id="yVe-h9-FsF"/>
-                        <outlet property="txtHydroProvider" destination="U1A-sF-AlQ" id="Jhw-xd-All"/>
-                        <outlet property="txtHydroUnitsUsed" destination="xvG-l3-yw0" id="HeG-8a-02E"/>
-                        <outlet property="txtInternetDataUsed" destination="ybS-1I-nFH" id="Yi1-g4-8tP"/>
-                        <outlet property="txtInternetProvider" destination="AjV-uc-g3Y" id="S40-lR-ER7"/>
-                        <outlet property="txtMinutesUsed" destination="5qr-2q-ZdJ" id="pp1-oG-QuI"/>
-                        <outlet property="txtMobileDataUsed" destination="IZ0-6L-3lo" id="tVN-jN-cd0"/>
-                        <outlet property="txtMobileManifature" destination="SYB-48-GT2" id="Ur6-Jc-LDX"/>
-                        <outlet property="txtMobileNumber" destination="qW1-Y9-XJV" id="upG-7S-aoy"/>
-                        <outlet property="txtMobilePlan" destination="Xhv-XD-ROj" id="o1H-lk-HcU"/>
+                        <outlet property="txtHydroAgency" destination="bPf-yL-rga" id="WEh-rA-0XF"/>
+                        <outlet property="txtHydroUnitConsumed" destination="i7u-ce-GhT" id="d4s-CO-L2c"/>
+                        <outlet property="txtInternetProviderName" destination="FGs-Up-YMA" id="ffv-qo-jff"/>
+                        <outlet property="txtMobileGBUsed" destination="IZ0-6L-3lo" id="Iga-AS-FmZ"/>
+                        <outlet property="txtMobileManufacturer" destination="oxU-8a-fr6" id="auL-k9-znB"/>
+                        <outlet property="txtMobileMinuteUsed" destination="5qr-2q-ZdJ" id="gxp-EG-u3g"/>
+                        <outlet property="txtMobileNumber" destination="qW1-Y9-XJV" id="BHH-Xn-cjY"/>
+                        <outlet property="txtMobilePlan" destination="17p-Xa-hOO" id="rc2-0T-MDs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJv-LU-RHb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -671,5 +664,6 @@
         <image name="CustIcon.png" width="219" height="230"/>
         <image name="receiptdollar" width="100" height="100"/>
         <image name="showBill" width="860" height="261"/>
+        <image name="ydro Units Used" width="16" height="16"/>
     </resources>
 </document>
