@@ -64,7 +64,19 @@ class AddNewBillViewController: UIViewController,UITextFieldDelegate {
           textField.inputAccessoryView = toolBar
         }
    
-    
+    @objc func doneClick()
+    {
+      let dateformatter1 = DateFormatter()
+      dateformatter1.dateStyle = .medium
+      dateformatter1.timeStyle = .none
+      txtBillDate.text = dateformatter1.string(from: datePicker.date)
+      txtBillDate.resignFirstResponder()
+    }
+     
+    @objc func cancelClick()
+    {
+      txtBillDate.resignFirstResponder()
+    }
    
         
     
