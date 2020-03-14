@@ -21,6 +21,7 @@ class AddNewBillViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var txtMobileNumber: UITextField!
     @IBOutlet weak var txtMobileManufacturer: UITextField!
     @IBOutlet weak var txtInternetProviderName: UITextField!
+    @IBOutlet weak var txtInternetGBUsed: UITextField!
     
     
     var customer: Customer?
@@ -127,6 +128,31 @@ class AddNewBillViewController: UIViewController,UITextFieldDelegate {
         }
     }
     
+    
+    @IBAction func btnAddNewBill(_ sender: UIButton) {
+        if segBillType.selectedSegmentIndex == 0
+        {
+            let bill = Mobile(billId: txtBillID.text!, billDate: (txtBillDate.text?.toDate())!, billType: BillType.Mobile, manufacturerName: txtMobileManufacturer.text!, planName: txtMobilePlan.text!, mobileNumber: txtMobileNumber.text!, mobGbUsed: Int(txtMobileGBUsed.text!)!, minute: Int(txtMobileMinuteUsed.text!)!)
+          
+            customer?.newBill(bill: bill, billId: txtBillID.text!)
+        }
+        else if segBillType.selectedSegmentIndex == 1
+        {
+            let bill = Hydro(billId: txtBillID.text!, billDate: (txtBillDate.text?.toDate())!, billType: BillType.Hydro, agencyName: txtHydroAgency.text!, unitsUsed: Double(txtHydroUnitConsumed.text!)!)
+            
+            customer?.newBill(bill:bill, billId: txtBillID.text!)
+        }
+        else if segBillType.selectedSegmentIndex == 2
+        
+        {
+            let bill = Internet(billId: txtBillID.text!, billDate: (txtBillDate.text?.toDate())!, billType: BillType.Mobile, providerName: txtInternetProviderName.text!, gbUsed: Double(txtInternetGBUsed.text!)!)
+            
+            customer?.newBill(bill: bill, billId: txtBillID.text!)
+        }
+        
+    
+        
+    }
     
 
 }
