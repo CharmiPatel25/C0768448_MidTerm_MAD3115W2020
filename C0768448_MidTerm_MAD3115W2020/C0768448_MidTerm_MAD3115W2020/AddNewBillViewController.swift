@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddNewBillViewController: UIViewController {
+class AddNewBillViewController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet weak var segBillType: UISegmentedControl!
     @IBOutlet weak var txtBillID: UITextField!
@@ -32,7 +32,9 @@ class AddNewBillViewController: UIViewController {
        self.navigationItem.title = "Add New Bill"
         txtBillDate.delegate = self
     }
-    
+    override func didReceiveMemoryWarning() {
+           super.didReceiveMemoryWarning()
+       }
    
     
   
