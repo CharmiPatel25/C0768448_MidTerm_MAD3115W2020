@@ -86,20 +86,38 @@ class AddNewBillViewController: UIViewController,UITextFieldDelegate {
         {
             txtBillID.isHidden = false
             txtBillDate.isHidden = false
-            txtMobileManufacturer.isHidden = true
-            txtMobileMinuteUsed.isHidden = true
-            txtMobileNumber.isHidden = true
-            txtMobileGBUsed.isHidden = true
-            txtMobilePlan.isHidden = true
+            txtMobileManufacturer.isHidden = false
+            txtMobileMinuteUsed.isHidden = false
+            txtMobileNumber.isHidden = false
+            txtMobileGBUsed.isHidden = false
+            txtMobilePlan.isHidden = false
             txtInternetProviderName.isHidden = true
             txtInternetGBUsed.isHidden = true
-            txtHydroAgency.isHidden = false
-            txtHydroUnitConsumed.isHidden = false
+            txtHydroAgency.isHidden = true
+            txtHydroUnitConsumed.isHidden = true
+            
+            
+           
         }
         else if sender.selectedSegmentIndex == 1
         
         {
-             txtBillID.isHidden = false
+            txtBillID.isHidden = false
+                       txtBillDate.isHidden = false
+                       txtMobileManufacturer.isHidden = true
+                       txtMobileMinuteUsed.isHidden = true
+                       txtMobileNumber.isHidden = true
+                       txtMobileGBUsed.isHidden = true
+                       txtMobilePlan.isHidden = true
+                       txtInternetProviderName.isHidden = true
+                       txtInternetGBUsed.isHidden = true
+                       txtHydroAgency.isHidden = false
+                       txtHydroUnitConsumed.isHidden = false
+            
+        }
+        else if sender.selectedSegmentIndex == 2
+        {
+            txtBillID.isHidden = false
              txtBillDate.isHidden = false
              txtMobileManufacturer.isHidden = true
              txtMobileMinuteUsed.isHidden = true
@@ -108,21 +126,6 @@ class AddNewBillViewController: UIViewController,UITextFieldDelegate {
              txtMobilePlan.isHidden = true
              txtInternetProviderName.isHidden = false
              txtInternetGBUsed.isHidden = false
-             txtHydroAgency.isHidden = true
-             txtHydroUnitConsumed.isHidden = true
-            
-        }
-        else if sender.selectedSegmentIndex == 2
-        {
-             txtBillID.isHidden = false
-             txtBillDate.isHidden = false
-             txtMobileManufacturer.isHidden = false
-             txtMobileMinuteUsed.isHidden = false
-             txtMobileNumber.isHidden = false
-             txtMobileGBUsed.isHidden = false
-             txtMobilePlan.isHidden = false
-             txtInternetProviderName.isHidden = true
-             txtInternetGBUsed.isHidden = true
              txtHydroAgency.isHidden = true
              txtHydroUnitConsumed.isHidden = true
         }
@@ -150,7 +153,10 @@ class AddNewBillViewController: UIViewController,UITextFieldDelegate {
             customer?.newBill(bill: bill, billId: txtBillID.text!)
         }
         
-    
+    let sb = UIStoryboard(name: "Main", bundle: nil)
+    let DetailedBillVC = sb.instantiateViewController(identifier: "billDetailsVC") as ShowBillDetailsViewController
+        DetailedBillVC.customerBill = self.customer
+    navigationController?.pushViewController(DetailedBillVC, animated: true)
         
     }
     

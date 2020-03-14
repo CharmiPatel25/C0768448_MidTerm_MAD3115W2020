@@ -32,7 +32,7 @@ class ShowBillDetailsViewController: UIViewController {
     {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let addNewBillVC = sb.instantiateViewController(identifier: "addNewBillVC") as! AddNewBillViewController
-        addNewBillVC.selectedCustomer = self.customerBill
+        addNewBillVC.customer = self.customerBill
         navigationController?.pushViewController(addNewBillVC, animated: true)
     }
     
@@ -57,18 +57,18 @@ extension ShowBillDetailsViewController: UITableViewDataSource, UITableViewDeleg
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BillDetailTableViewCell") as! BillDetailTableViewCell
         let billList = bills[indexPath.row]
-        if billList.billID.contains("MB"){
+        if billList.billType == .Mobile{
             cell.lblBillID?.text = billList.billID
             cell.lblBillDate?.text = billList.billDate.formatDate()
             cell.lblBillAmt.text = String(format:"$%.2f", billList.billCalculate())
         }
-        if billList.billID.contains("HY")
+        if billList.billType == .Hydro
         {
             cell.lblBillID?.text = billList.billID
             cell.lblBillDate?.text = billList.billDate.formatDate()
             cell.lblBillAmt.text = String(format:"$%.2f", billList.billCalculate())
         }
-        if billList.billID.contains("IN")
+        if billList.billType == .Internet
         {
             cell.lblBillID?.text = billList.billID
             cell.lblBillDate?.text = billList.billDate.formatDate()

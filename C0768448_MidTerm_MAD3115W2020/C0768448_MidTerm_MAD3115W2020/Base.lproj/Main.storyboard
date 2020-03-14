@@ -535,7 +535,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7QT-at-Smp">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="7QT-at-Smp">
                                 <rect key="frame" x="65" y="102" width="289" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
@@ -545,7 +545,6 @@
                                 </segments>
                                 <connections>
                                     <action selector="segBillType:" destination="MHc-g7-1t1" eventType="valueChanged" id="DWN-SU-6DS"/>
-                                    <action selector="segmentBillType:" destination="MHc-g7-1t1" eventType="valueChanged" id="utS-e9-9qr"/>
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3R9-Oo-dyp">
@@ -581,7 +580,6 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnAddBill:" destination="MHc-g7-1t1" eventType="touchUpInside" id="hVK-AT-29D"/>
                                     <action selector="btnAddNewBill:" destination="MHc-g7-1t1" eventType="touchUpInside" id="Ixh-dq-aeX"/>
                                 </connections>
                             </button>
