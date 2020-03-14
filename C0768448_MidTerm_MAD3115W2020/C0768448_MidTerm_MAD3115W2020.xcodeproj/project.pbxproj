@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7182D4DB241D85C9005A1866 /* CustomValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7182D4DA241D85C9005A1866 /* CustomValidation.swift */; };
 		9B4C22D42414457300A142AE /* CustomerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C22D22414457300A142AE /* CustomerTableViewController.swift */; };
 		9B4C22D52414457300A142AE /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C22D32414457300A142AE /* DataStorage.swift */; };
 		9B5C807B2419886C005C90BA /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C807A2419886C005C90BA /* Bill.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7182D4DA241D85C9005A1866 /* CustomValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomValidation.swift; sourceTree = "<group>"; };
 		9B4C22D22414457300A142AE /* CustomerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerTableViewController.swift; sourceTree = "<group>"; };
 		9B4C22D32414457300A142AE /* DataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 		9B5C807A2419886C005C90BA /* Bill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				9B5C807C241988E6005C90BA /* Hydro.swift */,
 				9B5C807E241989DD005C90BA /* Internet.swift */,
 				9BD22AEE241BF3910031EF3E /* Extension+textField.swift */,
+				7182D4DA241D85C9005A1866 /* CustomValidation.swift */,
 			);
 			path = C0768448_MidTerm_MAD3115W2020;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B85B62F241C2D39008A0D43 /* Extension+String.swift in Sources */,
+				7182D4DB241D85C9005A1866 /* CustomValidation.swift in Sources */,
 				9B88D384241061C700946F69 /* LoginViewController.swift in Sources */,
 				9B85B626241C2D19008A0D43 /* BillDetailTableViewCell.swift in Sources */,
 				9B92CFA42414229F00516512 /* Customer.swift in Sources */,
